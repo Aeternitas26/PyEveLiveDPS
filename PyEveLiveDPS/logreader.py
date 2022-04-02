@@ -52,7 +52,7 @@ _logLanguageRegex = {
         'capTransferedIn': "\(combat\) <.*?><b>([0-9]+).*> remote capacitor transmitted by <",
         'capNeutralizedIn': "\(combat\) <.*?ffe57f7f><b>([0-9]+).*> energy neutralized <",
         'nosTaken': "\(combat\) <.*?><b>\-([0-9]+).*> energy drained to <",
-        'mined': "\(mining\) .* <b><.*?><.*?>([0-9]+).*> units of .*<b>(.+)</b>"
+        'mined': "\(mining\) .* <.*?><.*?>([0-9]+).*> units of .*(.+)"
     },
     'russian': {
         'character': "(?<=Слушатель: ).*",
