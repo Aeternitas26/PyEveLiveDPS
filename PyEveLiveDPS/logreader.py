@@ -52,7 +52,7 @@ _logLanguageRegex = {
         'capTransferedIn': "\(combat\) <.*?><b>([0-9]+).*> remote capacitor transmitted by <",
         'capNeutralizedIn': "\(combat\) <.*?ffe57f7f><b>([0-9]+).*> energy neutralized <",
         'nosTaken': "\(combat\) <.*?><b>\-([0-9]+).*> energy drained to <",
-        'mined': "\(mining\) .*? <.*?><.*?>([0-9]+).*> units of <.*?><.*?>(.+?)<"
+        'mined': "\(mining\) .*? <.*?><.*?>([0-9]+).*> units of <.*?><.*?>(.+?)"
     },
     'russian': {
         'character': "(?<=Слушатель: ).*",
@@ -548,3 +548,4 @@ def ProcessCharacterLine(characterLine):
         if character:
             return character.group(0), language
     raise BadLogException("not character log")
+
