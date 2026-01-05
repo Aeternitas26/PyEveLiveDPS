@@ -16,14 +16,12 @@ Here is an example of what it looks like in regular mode and compact mode:
 As of 2.0, PELD includes a breakdown of values based on pilot and weapon type.  Here are some examples:  
 ![Breakdown pvp](https://i.imgur.com/Id7wUuE.png) ![Breakdown pve](https://i.imgur.com/GAUtC5a.png)
 
-For FCs, PELD now has a Fleet Mode that allows you to view the combat statistics of your entire fleet when they use PELD.  
-This is facilitated by a new website: https://peld-fleet.com/ ([peld-fleet source code](https://github.com/ArtificialQualia/PELD-Server))  
-The FC view looks like this:  
-![peld-fleet FC view](https://i.imgur.com/B7fP3qx.png)
+Fleet networking features in PELD are currently unavailable due to changes in the EVE API and lack of use.  Those features may become functional again in a future update.  
+The source code for the server components of the fleet features is available here: https://github.com/ArtificialQualia/PELD-Server
 
 ## Download and Running
 Download the latest version from here:  
-https://github.com/ArtificialQualia/PyEveLiveDPS/releases
+**https://github.com/ArtificialQualia/PyEveLiveDPS/releases**
 
 You have two download options:  
 PELD-standalone requires no installation, but takes a few seconds to start up.  
@@ -31,11 +29,13 @@ PELD-installer will install PELD to your computer like a traditional application
 
 If you plan on using PELD long term, it is recommended to use the PELD-installer version.
 
+A standalone Linux binary `peld-linux` is also available for download on newer releases.
+
 If you want PELD to overlay on top of your eve client, make sure you are running eve in borderless windowed mode.
 
 You can run multiple copies to track different characters at the same time.  You can also set up profiles to save different graph settings and window position/size.
 
-The packaged release is for Windows.  To run on Linux, run from source.  See below about how to run from source.  Other OSes are untested.
+Running directly from the source code is also possible. See below for instructions.  OSes other than Windows and Linux are untested and are unlikely to work without custom modifications.
 
 ## Why a live DPS grapher?
 
@@ -67,6 +67,8 @@ To run PELD directly from the source code, run the following commands with **Pyt
 pip install -r requirements.txt
 python ./PyEveLiveDPS/peld.py
 ```
-If you want to build an .exe yourself, see BUILDING.md
+Ensure your python includes tkinter (often downloaded as a separate package on package managers).
 
-If you are running on Linux, you may need to modify logreader.py to point to the correct directory where your eve logs are stored.  Also ensure your python includes tkinter.
+If you want to build an .exe or binary yourself, see BUILDING.md
+
+If you are running from source on Linux, in rare cases you may need to modify logreader.py to point to the correct directory where your eve logs are stored.
